@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Gochi+Hand&display=swap"
+      rel="stylesheet"
+    />
+    <title>Hangman</title>
+  </head>
+  <body>
+    <header>
+      <h1>Hangman</h1>
+      <p id="high-score">High Score: 0</p>
+    </header>
+    <main>
+      <div id="welcome">
+        <h1 id="welcome-header">Hangman</h1>
+        <h2 id="intro-text">
+          The rules are simple... guess the word correctly and avoid being
+          hanged!
+        </h2>
+        <form id="form">
+          <div id="topic">
+            <label id="label">Choose a topic:</label>
+            <select id="select" required>
+              <!-- <option value="mixed">Mixed</option> -->
+              <option value="Films">Films</option>
+              <option value="Famous People">Famous People</option>
+              <option value="Countries">Countries</option>
+            </select>
+          </div>
+          <button id="submitBtn" type="submit">Play Game</button>
+        </form>
+      </div>
+      <section id="instructions">
+        <div id="instructions-header-container">
+          <h2 id="instructions-header">Instructions:</h2>
+          <button id="instructionsBtnTwo">Close Instructions</button>
+        </div>
+        <ol>
+          <li class="list-item">
+            <p class="info">You are given <strong>10 lives</strong>.</p>
+          </li>
+          <li class="list-item">
+            <p class="info">
+              There are a total of <strong>18 words</strong> to guess correctly.
+            </p>
+          </li>
+          <li class="list-item">
+            <p class="info">
+              Names containing
+              <strong>more than one</strong> word will be seperated like so: _ _
+              _ - _ _ _ _
+            </p>
+          </li>
+
+          <li class="list-item">
+            <p class="info">
+              You must guess what the hidden word is using the provided
+              <strong>keys</strong>.
+            </p>
+          </li>
+
+          <li class="list-item">
+            <p class="info">
+              If you guess incorrectly, you will <strong>lose</strong> a life
+              and a segment of the hangman will be drawn. If you lose all lives
+              you will be <strong>hanged.</strong>
+            </p>
+          </li>
+
+          <li class="list-item">
+            <p class="info">
+              Guess all of the correct letters and you'll
+              <strong>win</strong> and proceed to the next round. If you manage
+              to guess all of the words correctly, you'll win and
+              <strong>avoid being hanged.</strong>
+            </p>
+          </li>
+        </ol>
+      </section>
+      <div id="game-banner-container">
+        <div id="game-banner">
+          <h1 id="game-banner-message">Game Over!</h1>
+          <div id="image-container-two">
+            <img src="./images/ten.jpg" id="image-two" />
+          </div>
+          <div id="score-container">
+            <p id="score">Current Score: 0</p>
+          </div>
+          <button id="nextWordBtn">Next Word</button>
+        </div>
+      </div>
+
+      <section id="mother-container">
+        <div id="hidden-word-container">
+          <p id="hidden-word">_ _ _ _ _ _ _ _ _</p>
+        </div>
+        <div id="word-category-box">
+          <div id="category-box">
+            <h3 id="category-title">Category: Films</h3>
+          </div>
+          <div id="word-count-container">
+            <p id="word-count">Word: 18/18</p>
+          </div>
+        </div>
+
+        <div id="word-container">
+          <div id="hint-box">
+            <p id="hint-message">
+              A hint will cost you <strong>5 lives...</strong>
+            </p>
+            <button id="hintBtn">Hint</button>
+          </div>
+        </div>
+        <div id="hangman">
+          <div id="image-container">
+            <img src="./images/zero.jpg" id="image" />
+          </div>
+          <p id="life">Lives: 10/10</p>
+        </div>
+        <section id="alphabet-container">
+          <div id="alphabet-grid">
+            <button class="alphabet-keys">a</button>
+            <button class="alphabet-keys">b</button>
+            <button class="alphabet-keys">c</button>
+            <button class="alphabet-keys">d</button>
+            <button class="alphabet-keys">e</button>
+            <button class="alphabet-keys">f</button>
+            <button class="alphabet-keys">g</button>
+            <button class="alphabet-keys">h</button>
+            <button class="alphabet-keys">i</button>
+            <button class="alphabet-keys">j</button>
+            <button class="alphabet-keys">k</button>
+            <button class="alphabet-keys">l</button>
+            <button class="alphabet-keys">m</button>
+            <button class="alphabet-keys">n</button>
+            <button class="alphabet-keys">o</button>
+            <button class="alphabet-keys">p</button>
+            <button class="alphabet-keys">q</button>
+            <button class="alphabet-keys">r</button>
+            <button class="alphabet-keys">s</button>
+            <button class="alphabet-keys">t</button>
+            <button class="alphabet-keys">u</button>
+            <div></div>
+            <button class="alphabet-keys">v</button>
+            <button class="alphabet-keys">w</button>
+            <button class="alphabet-keys">x</button>
+            <button class="alphabet-keys">y</button>
+            <button class="alphabet-keys">z</button>
+          </div>
+        </section>
+        <div id="quitter-box">
+          <button id="instructionsBtn">Click for Instructions</button>
+          <button id="forfeit">Give up</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
