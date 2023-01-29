@@ -37,7 +37,7 @@ header {
 main {
     display: flex;
     flex-direction: column;
-    justify-content: center; 
+    justify-content: flex-start;
     align-items: center;
     min-width: 100vw;
     min-height: 100vh;
@@ -88,7 +88,7 @@ img {
     grid-template-rows: 0.1fr 0.1fr 0.1fr 1.1fr 0.1fr ;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px;
-    max-height: 1200px;
+    height: 600px;
     min-width: 50%;
     background-color: rgb(221, 163, 245);
 
@@ -521,12 +521,13 @@ body {
         flex-direction: column;
         justify-content:flex-start;
         position: relative;
-        max-height: 950px;
+      height: 100vh;
         width: 100%;
         display: flex;
         align-items: center;
         top: 0px; 
         padding: 10px;
+        flex: 1;
     }
 
     #welcome {
@@ -609,8 +610,8 @@ body {
         grid-template-rows: 0.1fr 0.1fr 0.1fr 0.2fr 0.5fr 0.1fr;
         grid-template-columns: 100%;
         gap: 10px;
-        min-height: 100vh;
-        max-height: 950px;
+        /* min-height: 100vh; */
+        max-height: 100vh;
         max-width: 500px;
         min-width: 100%;
         background-color: rgb(221, 163, 245);
